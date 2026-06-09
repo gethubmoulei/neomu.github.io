@@ -1,0 +1,21 @@
+title: "牟磊 | 嵌入式软件工程师"
+description: "嵌入式软件工程师个人主页，聚焦汽车电子、工业控制、CAN 总线与自动化测试平台。"
+lang: "zh-CN"
+url: ""
+baseurl: ""
+
+author:
+  name: "牟磊"
+  role: "嵌入式软件工程师"
+  city: "重庆"
+  phone: "18716577471"
+  email: "mouleineo@outlook.com"
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .serena
