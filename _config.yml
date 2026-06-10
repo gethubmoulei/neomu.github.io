@@ -1,21 +1,145 @@
-title: "牟磊 | 嵌入式软件工程师"
-description: "嵌入式软件工程师个人主页，聚焦汽车电子、工业控制、CAN 总线与自动化测试平台。"
-lang: "zh-CN"
-url: "https://gethubmoulei.github.io"
-baseurl: "/neomu.github.io"
+# Basic Site Settings
+locale                   : "zh-CN"
+site_theme               : "default"
+title                    : "牟磊 | 嵌入式软件工程师"
+title_separator          : "-"
+name                     : &name "牟磊"
+description              : &description "嵌入式软件工程师个人主页，聚焦汽车电子、工业控制、CAN 总线与自动化测试平台。"
+url                      : "https://gethubmoulei.github.io"
+baseurl                  : "/neomu.github.io"
+repository               : "gethubmoulei/neomu.github.io"
 
 author:
-  name: "牟磊"
-  role: "嵌入式软件工程师"
-  city: "重庆"
-  phone: "18716577471"
-  email: "mouleineo@outlook.com"
+  avatar           : "profile.png"
+  name             : "牟磊"
+  pronouns         :
+  bio              : "嵌入式软件工程师，专注汽车电子 BCM / ECU、工业控制、CAN 总线协议与自动化测试平台。"
+  location         : "重庆，中国"
+  employer         :
+  uri              :
+  email            : "mouleineo@outlook.com"
+  phone            : "18716577471"
+  github           : "gethubmoulei"
+  linkedin         :
+  zhihu            :
 
-markdown: kramdown
-permalink: pretty
+author_en:
+  avatar           : "profile.png"
+  name             : "Mou Lei"
+  pronouns         :
+  bio              : "Embedded Software Engineer focused on motorcycle BCM / ECU, industrial control systems, CAN communication, diagnostics, and automated testing platforms."
+  location         : "Chongqing, China"
+  employer         :
+  uri              :
+  email            : "mouleineo@outlook.com"
+  phone            : "18716577471"
+  github           : "gethubmoulei"
+  linkedin         :
+  zhihu            :
+
+teaser                   :
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
+comments:
+  provider               : false
+atom_feed:
+  hide                   : true
+
+analytics:
+  provider               : false
+
+include:
+  - .htaccess
+  - _pages
 
 exclude:
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
   - Gemfile
   - Gemfile.lock
+  - LICENSE
   - README.md
+  - node_modules
+  - vendor
   - .serena
+  - .edge-tmp-profile
+  - "_tmp-*.png"
+
+keep_files:
+  - .git
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+timezone: Asia/Shanghai
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+whitelist:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

@@ -1,0 +1,58 @@
+<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+
+<script>
+  (function () {
+    var storageKey = "theme";
+    var root = document.documentElement;
+    var button = document.getElementById("theme-toggle");
+    var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+    function storedTheme() {
+      var value = localStorage.getItem(storageKey);
+      return value === "dark" || value === "light" ? value : null;
+    }
+
+    function preferredTheme() {
+      return media && media.matches ? "dark" : "light";
+    }
+
+    function currentTheme() {
+      return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    }
+
+    function applyTheme(theme) {
+      if (theme === "dark") {
+        root.setAttribute("data-theme", "dark");
+      } else {
+        root.removeAttribute("data-theme");
+      }
+      if (button) {
+        button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+      }
+    }
+
+    applyTheme(storedTheme() || preferredTheme());
+
+    if (button) {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        var nextTheme = currentTheme() === "dark" ? "light" : "dark";
+        localStorage.setItem(storageKey, nextTheme);
+        applyTheme(nextTheme);
+      }, true);
+    }
+
+    if (media && media.addEventListener) {
+      media.addEventListener("change", function (event) {
+        if (!storedTheme()) {
+          applyTheme(event.matches ? "dark" : "light");
+        }
+      });
+    }
+  })();
+</script>
+
+{% include analytics.html %}
+
+{% include comments-providers/scripts.html %}

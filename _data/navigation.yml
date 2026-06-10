@@ -1,0 +1,19 @@
+main:
+  - title: "首页"
+    url: /
+
+  - title: "项目"
+    url: /portfolio/
+
+  - title: "简历"
+    url: /cv/
+
+main_en:
+  - title: "Home"
+    url: /en/
+
+  - title: "Projects"
+    url: /en/portfolio/
+
+  - title: "CV"
+    url: /en/cv/

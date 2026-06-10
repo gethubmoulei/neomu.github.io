@@ -1,13 +1,35 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+{% assign document_lang = site.locale | slice: 0,2 %}
+{% if page.lang == "en" %}
+  {% assign document_lang = "en" %}
+{% endif %}
+
 <!doctype html>
-<html lang="{{ site.lang | default: 'zh-CN' }}">
+<html lang="{{ document_lang }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% include head.html %}
+    {% include head/custom.html %}
   </head>
+
   <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
     {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
   </body>
 </html>

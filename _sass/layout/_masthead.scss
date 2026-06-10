@@ -1,0 +1,146 @@
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
+.masthead {
+  position: fixed;
+  background: var(--global-bg-color);
+  height: fit-content;
+  top: 0;
+  width: 100%;
+
+  -webkit-animation: intro 0.3s both;
+          animation: intro 0.3s both;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  z-index: 20;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: var(--global-border-color);
+    width: 100%;
+  }
+
+  &__inner-wrap {
+    @include container;
+    @include clearfix;
+    padding: 0.5em 1em;
+    font-family: $sans-serif-narrow;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+
+    nav {
+      z-index: 10;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.masthead__menu {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    list-style-type: none;
+  }
+}
+
+.masthead__menu-item {
+  background-color: var(--global-bg-color);
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+
+  &--lg {
+    padding-right: 2em;
+    font-weight: 700;
+  }
+}
+
+.masthead__menu-item.selected a {
+  color: var(--global-text-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--global-text-color);
+  pointer-events: none; /* Move this here */
+  cursor: default; /* Move this here too */
+}
+
+.masthead__menu-item.selected a:hover {
+  color: var(--global-text-color);
+  border-bottom: 2px solid var(--global-text-color);
+  /* No need to repeat pointer-events and cursor here */
+}
+
+.masthead__menu-item--theme {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--global-masthead-link-color);
+  cursor: pointer;
+}
+
+.greedy-nav .theme-toggle {
+  position: static;
+  right: auto;
+  height: 2rem;
+  padding: 0;
+  background: transparent;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  color: var(--global-masthead-link-color-hover);
+  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  box-shadow: 0 0 0 2px var(--global-border-color);
+}
+
+.theme-toggle__icon,
+.theme-toggle__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.theme-toggle__icon svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.theme-toggle__moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle__sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle__moon {
+  display: block;
+}
