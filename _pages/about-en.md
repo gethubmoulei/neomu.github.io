@@ -7,7 +7,7 @@ author: en
 author_profile: true
 ---
 
-Embedded Software Engineer focused on motorcycle BCM / ECU, industrial control systems, CAN communication, diagnostics, and automated testing platforms.
+Embedded Software Engineer dedicate to motorcycle BCM / ECU, industrial control systems, CAN communication, diagnostics, and automated testing platforms.
 
 ## Profile
 
@@ -17,16 +17,16 @@ Experienced in the full embedded software development lifecycle, from low-level 
 
 Proficient in C programming for resource-constrained embedded systems and skilled in Python-based tool development, test automation, and desktop applications. Familiar with automotive communication protocols and diagnostics, including CAN, UDS, CCP, J1939, K-Line, SPI, I2C, and RS-232/485.
 
-Led the development of multiple production BCM and ECU projects, as well as end-of-line (EOL) and aging test systems. Designed and implemented supporting software platforms using Python, PyQt, MongoDB, and web technologies to improve test efficiency, data traceability, and engineering workflows.
+Led the development of multiple production BCM projects, as well as end-of-line (EOL) and aging test systems. Designed and implemented supporting software platforms using Python, PyQt, MongoDB, and web technologies to improve test efficiency, data traceability, and engineering workflows.
 
 Recognized for strong troubleshooting and root-cause analysis skills, with successful resolution of complex field issues involving power-on reset behavior, memory initialization, hardware protection mechanisms, and supplier component changes.
 
-Passionate about learning new technologies and continuously expanding expertise in embedded systems, automotive electronics, embedded Linux, automated testing, and AI-assisted software development. Recently explored integrating AI-driven tools with CAN network simulation and diagnostic testing workflows.
+Passionate about learning new technologies and continuously expanding expertise in embedded systems, automotive electronics, embedded Linux, automated testing, and AI-assisted software development. Recently explored CAN matrix simulates MCP service.
 
 ## Core Skills
 
 - Embedded development: C, SPC56, STM32, PowerPC MCU, Bootloader, RTOS, Flash/SRAM management
-- Automotive electronics: CAN, UDS, CCP, J1939, K-Line, SPI, I2C, RS-232/485
+- Communication protocol: CAN, UDS, CCP, J1939, K-Line, SPI, I2C, RS-232/485
 - Test tools: Python, PyQt5, JSON-configured testing, MongoDB, web log search systems
 - Industrial control: Modbus RTU, PLC, HMI, DCS integration, control cabinet design, field commissioning
 - Engineering workflow: Gitea, version control, troubleshooting, root-cause analysis
